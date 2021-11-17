@@ -1,74 +1,62 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- *  * print_listint - prints all elements of a listint_t list
- *   * @h: pointer to head of list
- *    * Return: number of nodes
- *     */
-size_t print_listint(const listint_t *h)
+* insert_node - inserts a node to be in order
+* @head: so nice. the tip of the long list.
+* @number: the number we want tp stick in so deep in the linked list
+*
+* Description: inserts a node in order and requires the use of a temp node
+* Return: the address of the new node
+*/
+
+listint_t *insert_node(listint_t **head, int number)
 {
-        const listint_t *current;
-            unsigned int n; /* number of nodes */
+	listint_t *new;
+	listint_t *temp = *head;
 
-                current = h;
-                    n = 0;
-                        while (current != NULL)
-                                {
-                                            printf("%i\n", current->n);
-                                                    current = current->next;
-                                                            n++;
-                                                                }
-
-                            return (n);
-}
-
-/**
- *  * add_nodeint_end - adds a new node at the end of a listint_t list
- *   * @head: pointer to pointer of first node of listint_t list
- *    * @n: integer to be included in new node
- *     * Return: address of the new element or NULL if it fails
- *      */
-listint_t *add_nodeint_end(listint_t **head, const int n)
-{
-        listint_t *new;
-            listint_t *current;
-
-                current = *head;
-
-                    new = malloc(sizeof(listint_t));
-                        if (new == NULL)
-                                    return (NULL);
-
-                            new->n = n;
-                                new->next = NULL;
-
-                                    if (*head == NULL)
-                                                *head = new;
-                                        else
-                                                {
-                                                            while (current->next != NULL)
-                                                                            current = current->next;
-                                                                    current->next = new;
-                                                                        }
-
-                                            return (new);
-}
-
-/**
- *  * free_listint - frees a listint_t list
- *   * @head: pointer to list to be freed
- *    * Return: void
- *     */
-void free_listint(listint_t *head)
-{
-        listint_t *current;
-
-            while (head != NULL)
-                    {
-                                current = head;
-                                        head = head->next;
-                                                free(current);
-                                                    }
+	new = malloc(sizeof(listint_t));
+	if (!new || !head)
+		return (NULL);
+	new->n = number;
+	/* if the value of head is equal to NULL then we place new before it */
+	if (!*head)
+	{
+		new->next = *head;
+		*head = new;
+		return (new);
+	}
+	/* while head has value do this loop*/
+	/* i initially did head->next but had problems with small lists*/
+	/* I also tried head->next->n which caused seg faults */
+	while (temp)
+	{
+		/* for when the number is bigger than the head's n value, */
+		/* but if it is less than the next head n value- we insert inbetween*/
+		if ((temp->n <= number) && (temp->next && (temp->next->n >= number)))
+		{
+			new->next = temp->next;
+			temp->next = new;
+			return (new);
+		}
+		/* if number is greater than the head's n value and */
+		/* the next node is a NULL then do this */
+		else if (temp->n <= number && !(temp->next))
+		{
+			new->next = NULL;
+			temp->next = new;
+			return (new);
+		}
+		/* when the number is smaller than heads value */
+		/* then we insert it before head and do stuff */
+		else if (temp->n > number)
+		{
+			new->next = temp;
+			*head = new;
+			return (new);
+		}
+		temp = temp->next;
+	}
+	return (NULL);
 }
