@@ -22,7 +22,7 @@ An introductory project on:
   * code must be 3 lines long
   * have to use the [(new print formatting)](https://pyformat.info/#number)
 
-**[4-print_float.py](4-print_float.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py) in order to print the float stored in the variable `number` with a precision of 2 digits.
+**[4-print_float.py](4-print_float.py)** - Complete the source code in order to print the float stored in the variable `number` with a precision of 2 digits.
   * not allowed to cast `number` to a string
   * have to use the [(new print formatting)](https://pyformat.info/#number)
 
