@@ -30,7 +30,7 @@ An introductory project on:
   * not allowed to use any loops or conditional statements
   * program should be maximum 5 lines long
 
-**[6-concat.py](6-concat.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py) in order to print `Welcome to Holberton School!`
+**[6-concat.py](6-concat.py)** - Complete the source code in order to print `Welcome to Holberton School!`
   * not allowed to use any loops or conditional statements
   * have to use the variables str1 and str2 in your new line of code
   * program should be exactly 5 lines long
