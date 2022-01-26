@@ -17,7 +17,7 @@ An introductory project on:
 
 **[2-print.py](2-print.py)** - Write a Python script that prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line.
 
-**[3-print_number.py](3-print_number.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py) in order to print the integer stored in the variable `number`, followed by `Battery street`, followed by a new line.
+**[3-print_number.py](3-print_number.py)** - Complete the [source code] in order to print the integer stored in the variable `number`, followed by `Battery street`, followed by a new line.
   * not allowed to cast the variable number into a string
   * code must be 3 lines long
   * have to use the [(new print formatting)](https://pyformat.info/#number)
