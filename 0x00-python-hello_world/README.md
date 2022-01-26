@@ -35,14 +35,14 @@ An introductory project on:
   * have to use the variables str1 and str2 in your new line of code
   * program should be exactly 5 lines long
 
-**[7-edges.py](7-edges.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py) such that:
+**[7-edges.py](7-edges.py)** - Complete the [source code such that:
   * `word_first_3` contains the first 3 letters of the variable `word`
   * `word_last_2` contains the last 2 letters of the variable `word`
   * `middle_word` contains the value of the variable `word` without the first and last letters
   * not allowed to use any loops or conditional statements
   * program should be exactly 8 lines long
 
-**[8-concat_edges.py](8-concat_edges.py)** - Complete the [source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py) in order to print `object-oriented programming with Python`, followed by a new line.
+**[8-concat_edges.py](8-concat_edges.py)** - Complete the [source code] in order to print `object-oriented programming with Python`, followed by a new line.
   * not allowed to use any loops or conditional statements
   * program should be exactly 5 lines long
   * not allowed to create new variables
