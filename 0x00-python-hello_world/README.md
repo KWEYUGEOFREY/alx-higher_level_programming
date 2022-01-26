@@ -26,7 +26,7 @@ An introductory project on:
   * not allowed to cast `number` to a string
   * have to use the [(new print formatting)](https://pyformat.info/#number)
 
-**[5-print_string.py](5-print_string.py)** - Complete the [source code](https://intranet.hbtn.io/rltoken/SsZaCpUT5-6nybzBeUkHyw) in order to print a string stored in the variable `str` three times, followed by a new line, followed by its first 9 characters and a new line.
+**[5-print_string.py](5-print_string.py)** - Complete the source code in order to print a string stored in the variable `str` three times, followed by a new line, followed by its first 9 characters and a new line.
   * not allowed to use any loops or conditional statements
   * program should be maximum 5 lines long
 
