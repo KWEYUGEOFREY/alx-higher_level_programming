@@ -6,7 +6,6 @@
 * insert_node - inserts a node to be in order
 * @head: so nice. the tip of the long list.
 * @number: the number we want tp stick in so deep in the linked list
-*
 * Description: inserts a node in order and requires the use of a temp node
 * Return: the address of the new node
 */
